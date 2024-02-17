@@ -21,12 +21,12 @@ class ThermostatModelBasedAgent:
             if self.temp_trend == 'increasing':
                 return "Wait and monitor"
             else:
-                return "Increase heating"
+                return "Heat"
         elif self.current_temp > self.target_range[1]:
             if self.temp_trend == 'decreasing':
                 return "Wait and monitor"
             else:
-                return "Decrease heating"
+                return "Cool"
         else:
             return "Maintain temperature"
 
